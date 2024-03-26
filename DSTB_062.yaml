@@ -25,6 +25,7 @@ proxies:
     path: "/trojan"
     headers:
       Host: telkom.inject.my.id
+  allowInsecure: true
 - name: SvrDSTB_DO_UnliTurbo_IP1
   type: trojan
   server: 104.18.53.172
