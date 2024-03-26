@@ -1,4 +1,30 @@
 proxies:
+- name: iflix1
+  type: trojan
+  server: telkom.inject.my.id
+  port: 443
+  password: bd77bd39-de78-49a0-9fd1-c54c80c78b05
+  udp: true
+  sni: hwvip.iflix.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: "/trojan"
+    headers:
+      Host: hwvip.iflix.com
+- name: iflix2
+  type: trojan
+  server: hwvip.iflix.com
+  port: 443
+  password: bd77bd39-de78-49a0-9fd1-c54c80c78b05
+  udp: true
+  sni: telkom.inject.my.id
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: "/trojan"
+    headers:
+      Host: telkom.inject.my.id
 - name: SvrDSTB_DO_UnliTurbo_IP1
   type: trojan
   server: 104.18.53.172
